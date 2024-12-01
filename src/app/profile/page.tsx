@@ -39,7 +39,7 @@ export default function ProfilePage(){
         <div className="flex flex-col items-center justify-center min-h-screen py-2">
             <h1>Profile</h1>
             <hr />
-            <h2>{data ==="nothing" ? "Nothing":<Link href={`/profile/${data}`}>{data}
+            <h2 className="bg-orange-500">{data ==="nothing" ? "Nothing":<Link href={`/profile/${data}`}>{data}
             </Link>}</h2>
             <button 
             onClick={logout}
