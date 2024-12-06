@@ -15,7 +15,14 @@ export default function LoginPage(){
     const [buutonDisabled,setButtonDisabled] = React.useState(false);
     const [loading,setloading] = React.useState(false);
 
-
+    const onForgotPassword = async() =>{
+        try {
+            router.push("/forgotpassword")
+        } catch (error:any) {
+            console.log("Something went wrong",error.message);
+            
+        }
+    }
 
     const onLogin = async() =>{
         try {
@@ -72,6 +79,10 @@ export default function LoginPage(){
              <button
              onClick={onLogin}
              className="p-2 border border-red-500 rounded-lg mb-4 focus:outline-blue-500 focus:border-blue-500">Login in</button>
+
+             <button
+             onClick={onForgotPassword}
+             className="p-2 border bg-yellow-400 border-red-500 rounded-lg mb-4 focus:outline-blue-500 focus:border-blue-500 hover:bg-purple-500">Forgot Password</button>
              <Link href= "/signup">Visit Sign up</Link>
         </div>
     )
